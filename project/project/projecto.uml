@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_B-bCsB4KEeirwelBf7BdIQ" name="RootElement">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_CCNWgB4KEeirwelBf7BdIQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_EcIbQB4KEeirwelBf7BdIQ" name="Produktuak">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_JBK3QB4LEeirwelBf7BdIQ" name="produktuID" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_LMBlQB4LEeirwelBf7BdIQ" name="izena" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_MumLQB4LEeirwelBf7BdIQ" name="prezioa" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_WnNPIB4LEeirwelBf7BdIQ" name="kompainia" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_JFJ00B4KEeirwelBf7BdIQ" name="Jokoak">
+    <generalization xmi:type="uml:Generalization" xmi:id="_5OAggB4KEeirwelBf7BdIQ" general="_EcIbQB4KEeirwelBf7BdIQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_hTBRkB4LEeirwelBf7BdIQ" name="generoa" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_jgsqEB4LEeirwelBf7BdIQ" name="data" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KvIDUB4KEeirwelBf7BdIQ" name="Kontzolak">
+    <generalization xmi:type="uml:Generalization" xmi:id="_6HqsYB4KEeirwelBf7BdIQ" general="_EcIbQB4KEeirwelBf7BdIQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_4rHZYB4LEeirwelBf7BdIQ" name="jokoak" visibility="private" type="_JFJ00B4KEeirwelBf7BdIQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_NLc70B4KEeirwelBf7BdIQ" name="Osagarriak">
+    <generalization xmi:type="uml:Generalization" xmi:id="_696X4B4KEeirwelBf7BdIQ" general="_EcIbQB4KEeirwelBf7BdIQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_0QT3cB4KEeirwelBf7BdIQ" name="ProduktuakKudeatu">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_CMvWEB4LEeirwelBf7BdIQ" name="jokoak" type="_JFJ00B4KEeirwelBf7BdIQ" association="_CMmzMB4LEeirwelBf7BdIQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_E7GZwB4LEeirwelBf7BdIQ" name="kontzolak" type="_KvIDUB4KEeirwelBf7BdIQ" association="_E7EkkB4LEeirwelBf7BdIQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_FnQ8MR4LEeirwelBf7BdIQ" name="osagarriak" type="_NLc70B4KEeirwelBf7BdIQ" association="_FnPHAB4LEeirwelBf7BdIQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_CMmzMB4LEeirwelBf7BdIQ" memberEnd="_CMvWEB4LEeirwelBf7BdIQ _CMv9IB4LEeirwelBf7BdIQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CMrrsB4LEeirwelBf7BdIQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CMsSwB4LEeirwelBf7BdIQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_CMv9IB4LEeirwelBf7BdIQ" name="produktuakkudeatu" type="_0QT3cB4KEeirwelBf7BdIQ" association="_CMmzMB4LEeirwelBf7BdIQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_E7EkkB4LEeirwelBf7BdIQ" memberEnd="_E7GZwB4LEeirwelBf7BdIQ _E7HA0B4LEeirwelBf7BdIQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E7FysB4LEeirwelBf7BdIQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_E7FysR4LEeirwelBf7BdIQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_E7HA0B4LEeirwelBf7BdIQ" name="produktuakkudeatu" type="_0QT3cB4KEeirwelBf7BdIQ" association="_E7EkkB4LEeirwelBf7BdIQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_FnPHAB4LEeirwelBf7BdIQ" memberEnd="_FnQ8MR4LEeirwelBf7BdIQ _FnRjQB4LEeirwelBf7BdIQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FnQVIB4LEeirwelBf7BdIQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FnQ8MB4LEeirwelBf7BdIQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_FnRjQB4LEeirwelBf7BdIQ" name="produktuakkudeatu" type="_0QT3cB4KEeirwelBf7BdIQ" association="_FnPHAB4LEeirwelBf7BdIQ"/>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3TBlEB4LEeirwelBf7BdIQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3TCMIB4LEeirwelBf7BdIQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
