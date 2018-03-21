@@ -16,4 +16,4 @@ class kontsolak(Produktuak):
 class osagarriak(Produktuak):
     def __init__(self, produktuID, izena, prezioa, kompainia):
         Produktuak.__init__(self, produktuID, izena, prezioa, kompainia)
-        print("xxxxxxxxxxxxxxxxxddddddddddddddddddd")
+        print("xxd")
